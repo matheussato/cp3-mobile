@@ -1,8 +1,10 @@
+import { ScrollView } from "react-native";
 import { View } from "react-native"
 import { Style } from "../../Contexts/Theme"
 import { CardStyleInterpolators } from "@react-navigation/stack";
 import { createSharedElementStackNavigator } from "react-navigation-shared-element";
 import { getProducts } from "../../Contexts/Data";
+import { ImageCuston } from "../../Components/Imagem";
 
 const options = {
   gestureEnabled: true,
@@ -21,13 +23,21 @@ export const Store = ({navigation}) => {
 }
 
 const Catalog = ({navigation})=> {
-    return(<View style={Style.container}>
+    return(<ScrollView>
         {getProducts().map(
-            (item)=> (<Card {...item}/>)
+            (item)=> (<Card {...item} navigation={navigation}/>)
             )}
-    </View>)
+         </ScrollView>)
 }
 
-const Details = ({navigation})=> {
-    return(<View style={Style.container}></View>)
+const Details = ({navigation,route})=> {
+    const product = route.params
+    return(<ScrollView>
+        <Text>{product.tittle}</Text>
+        <ImageCuston img={product.img}/>
+
+        <Text style={Style.text}>{product.descrition}</Text>
+        <Text style={Style.title}> R$ {product.price}</Text>
+        <Text style={Style.text}>R$ {product.descritionAll}</Text>
+    </ScrollView>)
 }

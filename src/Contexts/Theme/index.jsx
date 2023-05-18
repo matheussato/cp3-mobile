@@ -42,15 +42,35 @@ export const Style = StyleSheet.create({
         fontSize: constant.titleFontSize,
         color: colors.active
     },
+    text :{
+        fontSize: constant.textFontSize,
+        color: colors.active
+    },
     error: {
         padding: constant.SPACING / 2,
         fontSize: constant.subTextFontSize,
         color: colors.important
     },
+    img: {
+        height: 200,
+        width: 200
+    },
+    column : {
+        padding: constant.SPACING,
+        width: '50%'
+    },
+
+    width: {
+        width: constant.width
+    },
     row: {
         padding: constant.SPACING / 2,
         width: constant.width
     },
+    card: {
+        flexDirection : 'row'
+    },
+
     TextInput: {
         fontSize: constant.textFontSize,
         width: constant.width,
