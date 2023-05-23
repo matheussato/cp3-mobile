@@ -68,7 +68,12 @@ export const Style = StyleSheet.create({
         width: constant.width
     },
     card: {
-        flexDirection : 'row'
+        flexDirection : 'column',
+        alignItems: "center"
+    },
+
+    botao:{
+        width: '100%'
     },
 
     TextInput: {
@@ -81,7 +86,8 @@ export const Style = StyleSheet.create({
     },
     textButton: {
         fontSize: constant.textFontSize,
-        color: colors.white
+        color: colors.white,
+        
     },
     button: {
         padding: constant.SPACING / 2,

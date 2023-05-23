@@ -18,6 +18,7 @@ export const Home = ({ navigation }) => {
                 return false
             }
         }
+        
         getData(CallBack, 'user')
     })
     const onPress = () => {
@@ -25,7 +26,7 @@ export const Home = ({ navigation }) => {
     }
     return (
         <View style={Style.container}>
-            <Text>Open up App.js to s2tart working on your app!</Text>
+            <Text>Bem-Vindo</Text>
             <ButtonCuston onPress={onPress} placeholder='Logoff' />
             <StatusBar style="auto" />
         </View>

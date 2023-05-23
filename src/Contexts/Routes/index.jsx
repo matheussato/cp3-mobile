@@ -4,6 +4,7 @@ import { Logoff } from "../../Screens/Login/Logoff"
 import { Login } from "../../Screens/Login"
 import { Icons } from "../../Components/Icon"
 import { Routes } from "../../Screens/routes";
+import { Store } from "../../Screens/Store"
 
 export const ScreenArray = [
     {

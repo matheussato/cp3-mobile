@@ -1,10 +1,11 @@
 import { ScrollView } from "react-native";
-import { View } from "react-native"
+import { Text } from "react-native"
 import { Style } from "../../Contexts/Theme"
 import { CardStyleInterpolators } from "@react-navigation/stack";
 import { createSharedElementStackNavigator } from "react-navigation-shared-element";
 import { getProducts } from "../../Contexts/Data";
 import { ImageCuston } from "../../Components/Imagem";
+import { Card } from "../../Components/Cards";
 
 const options = {
   gestureEnabled: true,
@@ -29,6 +30,7 @@ const Catalog = ({navigation})=> {
             )}
          </ScrollView>)
 }
+
 
 const Details = ({navigation,route})=> {
     const product = route.params
